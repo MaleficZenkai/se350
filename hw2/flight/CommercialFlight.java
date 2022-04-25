@@ -1,15 +1,15 @@
-package HW1.flight;
+package hw2.flight;
 
-import HW1.airline.Airline;
-import HW1.airport.Airport;
-import HW1.ExceptionHandlings.NullParameterException;
+import hw2.ExceptionHandlings.NullParameterException;
+import hw2.airline.Airline;
+import hw2.airport.Airport;
 
 import java.util.Date;
 import java.util.Objects;
 import java.util.UUID;
 
 
-public class Flight {
+public class CommercialFlight implements FlightInterface {
     private Airline airline;
     private Airport origin;
     private Airport destination;
@@ -17,7 +17,7 @@ public class Flight {
     private Date departureTime;
 
 
-    public Flight(Airline airline, Airport origin, Airport destination, UUID flightNumber, Date departureTime) throws NullParameterException {
+    public CommercialFlight(Airline airline, Airport origin, Airport destination, UUID flightNumber, Date departureTime) throws NullParameterException {
         this.airline = airline;
         this.origin = origin;
         this.destination = destination;
@@ -78,7 +78,7 @@ public class Flight {
     public boolean equals(Object o) {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
-        Flight flight = (Flight) o;
+        CommercialFlight flight = (CommercialFlight) o;
         return airline.equals(flight.airline) && origin.equals(flight.origin) && destination.equals(flight.destination) && flightNumber.equals(flight.flightNumber) && departureTime.equals(flight.departureTime);
     }
 

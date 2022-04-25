@@ -1,7 +1,7 @@
-package HW1.airline;
+package hw2.airline;
 
-import HW1.ExceptionHandlings.BadParameterException;
-import HW1.ExceptionHandlings.NullParameterException;
+import hw2.ExceptionHandlings.BadParameterException;
+import hw2.ExceptionHandlings.NullParameterException;
 
 import java.util.Objects;
 
